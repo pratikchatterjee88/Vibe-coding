@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #111;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 12px 0 20px;
+}
+
+.hud-title {
+  width: min(960px, 95vw);
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.hud-title h1 {
+  margin: 0 0 6px;
+  font-size: 1.35rem;
+}
+
+.hud-title p {
+  margin: 4px 0;
+  color: #b5d3f2;
+}
+
+.game-shell {
+  position: relative;
+  width: min(960px, 95vw);
+}
+
+.overlay {
+  position: absolute;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.top-left {
+  top: 14px;
+  left: 14px;
+}
+
+.top-right {
+  top: 14px;
+  right: 14px;
+}
+
+.bottom-left {
+  left: 14px;
+  bottom: 14px;
+}
+
+.bottom-center {
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+}
+
+.overlay-card {
+  min-width: 210px;
+  padding: 8px 10px;
+  border: 1px solid #5f7da6cc;
+  border-radius: 8px;
+  background: #0d1420b8;
+  box-shadow: 0 0 10px #0008;
+  font-size: 0.84rem;
+  backdrop-filter: blur(2px);
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.bar-track {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #0b0f15;
+  border: 1px solid #3d4e66;
+}
+
+.bar-fill {
+  height: 100%;
+  width: 100%;
+}
+
+.bar-fill.player {
+  background: linear-gradient(90deg, #3ad16f, #7ef5a2);
+}
+
+.bar-fill.enemy {
+  background: linear-gradient(90deg, #cc283f, #ff5773);
+}
+
+.weapon-card {
+  min-width: 180px;
+  line-height: 1.35;
+}
+
+#statusMessage {
+  color: #d6ecff;
+  text-align: center;
+  min-width: 320px;
+  font-weight: 700;
+}
+
+#gameCanvas {
+  width: 100%;
+  height: auto;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background: #000;
+  margin-bottom: 10px;
+  image-rendering: crisp-edges;
+}

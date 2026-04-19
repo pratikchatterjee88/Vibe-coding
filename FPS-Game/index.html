@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arena Duel FPS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hud-title">
+      <h1>Arena Duel FPS</h1>
+      <p>
+        Controls: <strong>Arrow Keys</strong> move/turn, <strong>Space</strong> shoot
+      </p>
+    </div>
+
+    <div class="game-shell">
+      <canvas id="gameCanvas" width="960" height="540"></canvas>
+
+      <div class="overlay top-left">
+        <div class="overlay-card">
+          <div class="label-row">
+            <span>PLAYER HP</span>
+            <span id="playerHealth">100</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill player" id="playerHealthBar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="overlay top-right">
+        <div class="overlay-card">
+          <div class="label-row">
+            <span>ENEMY HP</span>
+            <span id="enemyHealth">100</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill enemy" id="enemyHealthBar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="overlay bottom-left">
+        <div class="overlay-card weapon-card">
+          <div id="weaponName">Weapon: Arena Rifle</div>
+          <div id="ammoText">Ammo: 12 / INF</div>
+        </div>
+      </div>
+
+      <div class="overlay bottom-center">
+        <div class="overlay-card status-card" id="statusMessage">Defeat the enemy bot.</div>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
